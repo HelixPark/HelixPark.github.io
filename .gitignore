@@ -6,3 +6,11 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+
+# -----------------------------------------------
+# 加密文章 - 不上传到 GitHub（明文保护）
+# 方式一：按文件名精确屏蔽（每新增一篇加密文章就在此添加一行）（下一行去掉生效即可）
+# source/_posts/加密文测试.md
+# 方式二：如果把所有加密文章统一放到 source/_posts/_private/ 目录下
+#         则只需下面这一行，无需逐个添加
+# source/_posts/_private/
