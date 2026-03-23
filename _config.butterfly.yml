@@ -18,10 +18,11 @@ nav:
   fixed: false
 
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  首页: / || fas fa-home
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  归档: /archives/ || fas fa-archive
+  关于: /about/ || fas fa-user
 
 # --------------------------------------
 # Code Blocks Settings
