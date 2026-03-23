@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="760" height="560" fill="#f8f9fa" rx="12"/>
+  <text x="380" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50" font-family="Arial, sans-serif">多头注意力机制 (Multi-Head Attention)</text>
+
+  <!-- Formula -->
+  <rect x="160" y="52" width="440" height="46" rx="10" fill="#eaf2ff" stroke="#3498db" stroke-width="1.5"/>
+  <text x="380" y="70" text-anchor="middle" font-size="12" fill="#2980b9" font-family="Arial, sans-serif">MultiHead(Q,K,V) = Concat(head₁,...,headₕ) · Wᴼ</text>
+  <text x="380" y="90" text-anchor="middle" font-size="12" fill="#2980b9" font-family="Arial, sans-serif">where headᵢ = Attention(QWᵢQ, KWᵢK, VWᵢV)</text>
+
+  <!-- Input Q K V -->
+  <rect x="100" y="120" width="80" height="36" rx="7" fill="#e74c3c" filter="url(#shadow)"/>
+  <text x="140" y="143" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="Arial, sans-serif">Q</text>
+
+  <rect x="340" y="120" width="80" height="36" rx="7" fill="#2ecc71" filter="url(#shadow)"/>
+  <text x="380" y="143" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="Arial, sans-serif">K</text>
+
+  <rect x="580" y="120" width="80" height="36" rx="7" fill="#3498db" filter="url(#shadow)"/>
+  <text x="620" y="143" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="Arial, sans-serif">V</text>
+
+  <!-- Linear projections for head 1 -->
+  <rect x="60" y="200" width="90" height="34" rx="7" fill="#e74c3c" opacity="0.7"/>
+  <text x="105" y="222" text-anchor="middle" font-size="11" fill="white" font-family="Arial, sans-serif">Linear W₁Q</text>
+
+  <rect x="310" y="200" width="90" height="34" rx="7" fill="#2ecc71" opacity="0.7"/>
+  <text x="355" y="222" text-anchor="middle" font-size="11" fill="white" font-family="Arial, sans-serif">Linear W₁K</text>
+
+  <rect x="560" y="200" width="90" height="34" rx="7" fill="#3498db" opacity="0.7"/>
+  <text x="605" y="222" text-anchor="middle" font-size="11" fill="white" font-family="Arial, sans-serif">Linear W₁V</text>
+
+  <!-- Linear projections for head 2 -->
+  <rect x="160" y="200" width="90" height="34" rx="7" fill="#e74c3c" opacity="0.4"/>
+  <text x="205" y="222" text-anchor="middle" font-size="11" fill="#333" font-family="Arial, sans-serif">Linear W₂Q</text>
+
+  <rect x="410" y="200" width="90" height="34" rx="7" fill="#2ecc71" opacity="0.4"/>
+  <text x="455" y="222" text-anchor="middle" font-size="11" fill="#333" font-family="Arial, sans-serif">Linear W₂K</text>
+
+  <rect x="660" y="200" width="90" height="34" rx="7" fill="#3498db" opacity="0.4"/>
+  <text x="705" y="222" text-anchor="middle" font-size="11" fill="#333" font-family="Arial, sans-serif">Linear W₂V</text>
+
+  <!-- Attention head 1 -->
+  <rect x="60" y="278" width="220" height="44" rx="8" fill="#8e44ad" filter="url(#shadow)"/>
+  <text x="170" y="305" text-anchor="middle" font-size="13" fill="white" font-family="Arial, sans-serif">Scaled Dot-Product Attention (head₁)</text>
+
+  <!-- Attention head 2 -->
+  <rect x="310" y="278" width="220" height="44" rx="8" fill="#8e44ad" opacity="0.5"/>
+  <text x="420" y="305" text-anchor="middle" font-size="13" fill="white" font-family="Arial, sans-serif">Scaled Dot-Product Attention (head₂)</text>
+
+  <!-- ... -->
+  <text x="600" y="305" text-anchor="middle" font-size="22" fill="#8e44ad" font-family="Arial, sans-serif">···</text>
+
+  <!-- Concat -->
+  <rect x="200" y="370" width="360" height="44" rx="8" fill="#d35400" filter="url(#shadow)"/>
+  <text x="380" y="397" text-anchor="middle" font-size="14" fill="white" font-family="Arial, sans-serif">Concat (拼接所有头的输出)</text>
+
+  <!-- Linear Output -->
+  <rect x="260" y="450" width="240" height="44" rx="8" fill="#16a085" filter="url(#shadow)"/>
+  <text x="380" y="477" text-anchor="middle" font-size="14" fill="white" font-family="Arial, sans-serif">Linear Wᴼ (输出投影)</text>
+
+  <!-- Output -->
+  <rect x="300" y="520" width="160" height="34" rx="8" fill="#2c3e50" filter="url(#shadow)"/>
+  <text x="380" y="542" text-anchor="middle" font-size="13" fill="white" font-family="Arial, sans-serif">多头注意力输出</text>
+
+  <!-- Arrows from Q K V to linear -->
+  <line x1="140" y1="156" x2="105" y2="200" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="140" y1="156" x2="205" y2="200" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="156" x2="355" y2="200" stroke="#2ecc71" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="156" x2="455" y2="200" stroke="#2ecc71" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="156" x2="605" y2="200" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="156" x2="705" y2="200" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrows from linear to attention -->
+  <line x1="105" y1="234" x2="130" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <line x1="355" y1="234" x2="200" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <line x1="605" y1="234" x2="210" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+
+  <line x1="205" y1="234" x2="360" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <line x1="455" y1="234" x2="420" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+  <line x1="705" y1="234" x2="500" y2="278" stroke="#555" stroke-width="1.3" marker-end="url(#arrow)"/>
+
+  <!-- Arrows from attention to concat -->
+  <line x1="170" y1="322" x2="320" y2="370" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="322" x2="400" y2="370" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrows concat to linear to output -->
+  <line x1="380" y1="414" x2="380" y2="450" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="494" x2="380" y2="520" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
