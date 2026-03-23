@@ -1,6 +1,6 @@
 ---
 title: 图解 Transformer：从零理解"注意力就是一切"
-date: 2024-01-15
+date: 2026-03-23
 tags:
   - 深度学习
   - NLP
@@ -9,6 +9,7 @@ tags:
 categories:
   - 论文
 cover: /images/transformer-architecture.svg
+mathjax: true
 ---
 
 > 2017 年，Google 的一篇论文《Attention Is All You Need》彻底改变了自然语言处理的格局。Transformer 架构不仅横扫了机器翻译任务，更成为 BERT、GPT、T5 等一系列大模型的基石。本文将用图文并茂的方式，带你从零理解 Transformer 的每一个核心组件。
